@@ -4,19 +4,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Yellowtail&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
 
 <!-- Header  -->
 
 <h1 id="ML"> Electric Vehicle Range Prediction </h1>
 <h2 id="enter"> Enter the below details accurately to get desired Results: </h2>
-<p id="info">For Drive: Front:0 AWD:1 Rear:2</p>
+<p id="info">For Drive: Front:0 AWD:1 Rear:2 </p>
 <br>
 
 <!-- Form start -->
-<!-- CHANGES -->
-<!--always add action and method to forms-->
-<!--let all input tags gave a name attribute, we need it for request.form-->
-<!-- Add id and make field, linear regression needs 25 inputs but you had only 23 input fields-->
 <div id="form">
     <form class="login" action="{{ url_for('predict') }}" method="post">
         <div id="f">
@@ -24,25 +22,25 @@
             <!-- Input Acceleration -->
             <div class="input">
                 <label for="inputAcceleration" class="form-label"></label>
-                <input type="number" class="form-control" name="inputAcceleration" placeholder="Acceleration">
+                <input type="number" class="form-control" name="inputAcceleration" placeholder="Acceleration" required>
             </div>
 
             <!-- Input TopSpeed -->
             <div class="input">
                 <label for="inputTopSpeed" class="form-label"></label>
-                <input type="number" class="form-control" name="inputTopSpeed" placeholder="Top Speed">
+                <input type="number" class="form-control" name="inputTopSpeed" placeholder="Top Speed" required>
             </div>
 
             <!-- Input TotalPower -->
             <div class="input">
                 <label for="inputTotalPower" class="form-label"></label>
-                <input type="number" class="form-control" name="inputTotalPower" placeholder="Total Power">
+                <input type="number" class="form-control" name="inputTotalPower" placeholder="Total Power" required>
             </div>
 
             <!-- Input TotalTorque -->
             <div class="input">
                 <label for="inputTotalTorque" class="form-label"></label>
-                <input type="number" class="form-control" name="inputTotalTorque" placeholder="Total Torque">
+                <input type="number" class="form-control" name="inputTotalTorque" placeholder="Total Torque" required>
             </div>
 
             <!-- Input Drive -->
@@ -57,74 +55,74 @@
 
              <div class="input">
                 <label for="inputDrive" class="form-label"></label>
-                <input type="number" class="form-control" name="inputDrive" placeholder="Drive">
+                <input type="number" class="form-control" name="inputDrive" placeholder="Drive" required>
             </div>
 
             <!-- Input BatteryCapacity -->
             <div class="input">
                 <label for="inputBatteryCapacity" class="form-label"></label>
-                <input type="number" class="form-control" name="inputBatteryCapacity" placeholder="Battery Capacity">
+                <input type="number" class="form-control" name="inputBatteryCapacity" placeholder="Battery Capacity" required>
             </div>
 
             <!-- Input ChargePower -->
             <div class="input">
                 <label for="inputChargePower" class="form-label"></label>
-                <input type="number" class="form-control" name="inputChargePower" placeholder="Charge Power">
+                <input type="number" class="form-control" name="inputChargePower" placeholder="Charge Power" required>
             </div>
 
             <!-- Input ChargeSpeed -->
             <div class="input">
                 <label for="inputChargeSpeed" class="form-label"></label>
-                <input type="number" class="form-control" name="inputChargeSpeed" placeholder="Charge Speed">
+                <input type="number" class="form-control" name="inputChargeSpeed" placeholder="Charge Speed" required>
             </div>
 
             <!-- Input FastChargeSpeed -->
             <div class="input">
                 <label for="inputFastChargeSpeed" class="form-label"></label>
-                <input type="number" class="form-control" name="inputFastChargeSpeed" placeholder="Fast Charge Speed">
+                <input type="number" class="form-control" name="inputFastChargeSpeed" placeholder="Fast Charge Speed" required>
             </div>
 
             <!-- Input Length -->
             <div class="input">
                 <label for="inputLength" class="form-label"></label>
-                <input type="number" class="form-control" name="inputLength" placeholder="Length">
+                <input type="number" class="form-control" name="inputLength" placeholder="Length" required>
             </div>
 
             <!-- Input Width -->
             <div class="input">
                 <label for="inputWidth" class="form-label"></label>
-                <input type="number" class="form-control" name="inputwidth" placeholder="Width">
+                <input type="number" class="form-control" name="inputwidth" placeholder="Width" required>
             </div>
 
             <!-- Input Height -->
             <div class="input">
                 <label for="inputHeight" class="form-label"></label>
-                <input type="number" class="form-control" name="inputHeight" placeholder="Height">
+                <input type="number" class="form-control" name="inputHeight" placeholder="Height" required>
             </div>
 
             <!-- Input WheelBase -->
             <div class="input">
                 <label for="inputWheelBase" class="form-label"></label>
-                <input type="number" class="form-control" name="inputWheelBase" placeholder="Wheelbase">
+                <input type="number" class="form-control" name="inputWheelBase" placeholder="Wheelbase" required>
             </div>
 
             <!-- Input GrossVehicleWeight -->
             <div class="input">
                 <label for="inputGrossVehicleWeight" class="form-label"></label>
                 <input type="number" class="form-control" name="inputGrossVehicleWeight"
-                    placeholder="Gross Vehicle Weigth">
+                    placeholder="Gross Vehicle Weigth" required>
             </div>
 
             <!-- Input MaxPayload -->
             <div class="input">
                 <label for="inputMaxPayload" class="form-label"></label>
-                <input type="number" class="form-control" name="inputMaxPayload" placeholder="Maximum Payload">
+                <input type="number" class="form-control" name="inputMaxPayload" placeholder="Maximum Payload" required>
             </div>
 
             <!-- Input CargoVolume -->
             <div class="input">
                 <label for="inputCargoVolume" class="form-label"></label>
-                <input type="number" class="form-control" name="inputCargoVolume" placeholder="Cargo Volume">
+                <input type="number" class="form-control" name="inputCargoVolume" placeholder="Cargo Volume" required>
             </div>
 
         </div>
