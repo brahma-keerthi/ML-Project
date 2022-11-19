@@ -16,7 +16,7 @@ def predict():
     For rendering results on HTML GUI
     '''
     #print(request.form)
-    int_features = [int(x) if x != '' else 0 for x in request.form.values()]
+    int_features = [float(x) if x != '' else 0 for x in request.form.values()]
     print("I F =",int_features)
     final = []
     final.append(int_features)
@@ -28,4 +28,4 @@ def predict():
     return render_template('pred.html', ev1=output[0][0], ev2=output[0][1],ev3=output[0][2],ev4=output[0][3],ev5=output[0][4],ev6=output[0][5],ev7=output[0][6])
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=4996)
