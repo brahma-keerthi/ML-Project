@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-image: url(/static/img/blue.webp);
+    background-size: cover;
+}
+
+#ML {
+    text-shadow: 0px 0px 05px #59d0ff;
+    color: #59d0ff;
+    font-family: Signika Negative;
+    font-size: 5em;
+    margin: 15px;
+    text-align: center;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* @keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #b4c2ff,
+        0 0 11px #b3c2ff,
+        0 0 19px #a2b5ff,
+        0 0 40px #96abff,
+        0 0 80px #6e8bff,
+        0 0 90px #5f7fff,
+        0 0 100px #5e7eff,
+        0 0 150px #5d7dff;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+} */
+
+::-webkit-scrollbar {
+    width: 0 !important
+}
+
+#enter {
+    color: #62f4ff;
+    text-shadow: 0px 0px 30px #62f4ff;
+    font-family: Signika Negative;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#info {
+    color: #ffffff;
+    margin:15px auto;
+    font-weight: bold;
+    text-shadow: 0px 0px 30px #ffffff;
+    font-family: Signika Negative;
+    text-align: center;
+    font-size: 2em;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#f {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.form-control {
+    border: none;
+    margin: 20px auto;
+    color: black;
+    background-color: #62f4ff;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.input {
+    height: 40px;
+    width: 300px;
+    margin: 10px 30px;
+}
+
+::placeholder {
+    text-align: center;
+    font-size: 1.1em;
+    font-family: Roboto Condensed;
+    color: black;
+}
+/* #op{
+    text-align: center;
+    font-size: 1em;
+    font-family: Poppins;
+    color: black;
+    height: 40px;
+    width: 300px;
+    margin: 10px 30px;
+} */
+#btn {
+    display: flex;
+}
+
+.btn {
+    font-size: 1.5em;
+    border-radius: 10px;
+    font-weight: 900px;
+    font-family: Roboto Condensed;
+    background-color: #3a86ff;
+    color: #000f49;
+    margin: 80px auto 0;
+    height: 40px;
+    width: 660px;
+    transition: scale 0.1s;
+    border: #61e2f6;
+}
+
+.btn:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #3a86ff;
+    color :aliceblue;
+}
+
+/* #res {
+    text-align: center;
+    font-family: Poppins;
+    color: white;
+    font-size: 4em;
+} */
+
+table, th, td {
+    border: 1px solid;
+    background-color: #e3f7f963;
+    font-family:Signika Negative;
+    margin: 15 auto;
+    width: 500px;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 7px;
+}
+
+td:nth-child(1) {
+    background-color: #2995f9;
+}
+
+td:nth-child(2) {
+    background-color: #62f4ff;
+}
+
+#table{
+    display:flex;
+}
